@@ -1,0 +1,117 @@
+# Inicio Rápido - 8cars
+
+## Instalación Rápida (15 minutos)
+
+### Paso 1: Clonar el proyecto
+```bash
+git clone https://github.com/JRomero00/8cars.git
+cd 8cars
+```
+
+### Paso 2: Instalar Frontend
+```bash
+cd frontend
+npm install
+```
+
+### Paso 3: Configurar variables de entorno
+```bash
+# Copia el archivo de ejemplo
+cp .env.example .env.local
+
+# Edita .env.local y agrega tus credenciales:
+# - NEXT_PUBLIC_SANITY_PROJECT_ID
+# - NEXT_PUBLIC_SUPABASE_URL
+# - NEXT_PUBLIC_SUPABASE_ANON_KEY
+```
+
+### Paso 4: Instalar Sanity Studio
+```bash
+cd ../sanity-studio
+npm install
+
+# Login en Sanity
+npx sanity login
+
+# Inicializar proyecto
+npx sanity init
+```
+
+### Paso 5: ¡Listo para desarrollar!
+```bash
+# Terminal 1 - Frontend
+cd frontend
+npm run dev
+# → http://localhost:3000
+
+# Terminal 2 - Sanity Studio
+cd sanity-studio
+npm run dev
+# → http://localhost:3333
+```
+
+---
+
+## Comandos Útiles
+
+### Frontend (Next.js)
+```bash
+npm run dev        # Desarrollo
+npm run build      # Build producción
+npm run start      # Servidor producción
+npm run lint       # Verificar código
+```
+
+### Sanity Studio
+```bash
+npm run dev        # Desarrollo local
+npm run build      # Build studio
+npm run deploy     # Deploy a Sanity
+```
+
+### Git
+```bash
+git status                    # Ver cambios
+git add .                     # Agregar todo
+git commit -m "mensaje"       # Commit
+git push                      # Subir a GitHub
+```
+
+---
+
+## Links Importantes
+
+- **Sanity.io:** https://www.sanity.io/
+- **Supabase:** https://supabase.com/
+- **Vercel:** https://vercel.com/
+- **Next.js Docs:** https://nextjs.org/docs
+
+---
+
+## Documentación Completa
+
+- `INDICE.md` - Empieza aquí
+- `docs/INSTALACION.md` - Guía detallada
+- `docs/DESARROLLO.md` - Tips de desarrollo
+- `RESUMEN-EJECUTIVO.md` - Visión general
+
+---
+
+## Problemas Comunes
+
+### Error: "Module not found"
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Error: Sanity project not found
+- Verifica el Project ID en `sanity.config.ts`
+- Asegúrate de estar logueado: `npx sanity login`
+
+### Los estilos no se ven
+- Reinicia el servidor: Ctrl+C → `npm run dev`
+
+---
+
+¡Listo para comenzar a desarrollar! 🎉
